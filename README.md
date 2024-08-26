@@ -1,6 +1,7 @@
 # iceberg
-Feito em python com o framework kivy usando a IDE visual studio code.
-Pode copiar, mas deixe a fonte de onde copiou.
+Aplicativo base de mistérios para o portfólio feito em python com o framework kivy usando a IDE Visual Studio Code.
+Pode copiar e editar, mas deixe a fonte de onde copiou.
 Podemos trabalhar juntos.
+
+Objetivo do programa:
 Para vender, fazer parcerias ou usar de portfólio.
-Irei fazer o deploy daqui a pouco (indo comprar café)
