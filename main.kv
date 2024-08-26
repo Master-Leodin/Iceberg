@@ -1,0 +1,104 @@
+<Principal>:
+    # Cor de fundo e caixa PRINCIPAL
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:
+                Image:
+                    source: "data/iceberg.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+
+                # Texto
+                CustomLabel:
+                    text: f"Selecione um iceberg\nRole para baixo para ver mais"
+                
+                CustonBox2:
+
+                    CustonBox:
+
+                        BotoesMenu:
+                            text: "Animais"
+                            on_release: app.root.current = "animais"
+
+                        BotoesMenu:
+                            text: "Ufologia"
+                            on_release: app.root.current = "ufologia"
+
+                        BotoesMenu:
+                            text: "Pessoas"
+                            on_release: app.root.current = "pessoas"
+
+                        BotoesMenu:
+                            text: "Lugares Misteriosos"
+                            on_release: app.root.current = "lugares_misteriosos"
+
+                        BotoesMenu:
+                            text: "Falhas na Matrix"
+                            on_release: app.root.current = "falhas_na_matrix"
+
+                        BotoesMenu:
+                            text: "Vivemos numa simulação?"
+                            on_release: app.root.current = "vivemos_numa_simulacao"
+
+                        BotoesMenu:
+                            text: "Teorias da Conspiração"
+                            on_release: app.root.current = "teorias_da_conspiracao"
+
+                        BotoesMenu:
+                            text: "Artefatos Misteriosos"
+                            on_release: app.root.current = "artefatos_misteriosos"
+                    
+                    CustonBox:
+
+                        BotoesMenu:
+                            text: "Mistérios da Ciência"
+                            on_release: app.root.current = "misterios_da_ciencia"
+
+                        BotoesMenu:
+                            text: "Civilizações Perdidas"
+                            on_release: app.root.current = "civilizacoes_perdidas"
+
+                        BotoesMenu:
+                            text: "Fenômenos Paranormais"
+                            on_release: app.root.current = "fenomenos_paranormais"
+
+                        BotoesMenu:
+                            text: "Casos Não Resolvidos"
+                            on_release: app.root.current = "casos_nao_resolvidos"
+
+                        BotoesMenu:
+                            text: "Objetos Amaldiçoados"
+                            on_release: app.root.current = "objetos_amaldicoados"
+
+                        BotoesMenu:
+                            text: "Mensagens Criptografadas"
+                            on_release: app.root.current = "mensagens_criptografadas"
+
+                        BotoesMenu:
+                            text: "Livros Misteriosos"
+                            on_release: app.root.current = "livros_misteriosos"
+
+                        BotoesMenu:
+                            text: "Casos de Reencarnação"
+                            on_release: app.root.current = "reencarnacao"
+                CustonBoxLivros:            
+                    BotoesLivros:
+                        text: "Livros para aprimorar seus conhecimentos"
+                        on_release: app.root.current = "livros"
+
+                    BotaoSobre:
+                        id: botao_sobre 
+                        text: "Contato, problemas, pedidos e doações"
+                        on_release: app.root.current = "contato"

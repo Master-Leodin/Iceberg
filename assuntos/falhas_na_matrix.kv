@@ -1,0 +1,49 @@
+<Falhas_Na_Matrix>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/matrix_failure.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Falhas na Matrix\nRole para baixo para ver mais"
+
+                BotoesMenu:
+                    text: "Efeito Mandela"
+                    on_release: app.root.current = "content_screen_falhas_na_matrix"; app.root.get_screen('content_screen_falhas_na_matrix').load_content('https://icebergdemisterios.wordpress.com/efeito-mandela/')
+
+                BotoesMenu:
+                    text: "Gêmeos Desaparecidos"
+                    on_release: app.root.current = "content_screen_falhas_na_matrix"; app.root.get_screen('content_screen_falhas_na_matrix').load_content('https://icebergdemisterios.wordpress.com/gemeos-desaparecidos/')
+
+                BotoesMenu:
+                    text: "Pista Dupla"
+                    on_release: app.root.current = "content_screen_falhas_na_matrix"; app.root.get_screen('content_screen_falhas_na_matrix').load_content('https://icebergdemisterios.wordpress.com/pista-dupla/')
+
+                BotoesMenu:
+                    text: "Relógio Que Mudou de Horas"
+                    on_release: app.root.current = "content_screen_falhas_na_matrix"; app.root.get_screen('content_screen_falhas_na_matrix').load_content('https://icebergdemisterios.wordpress.com/o-relogio-que-mudou-de-horas/')
+    
+                BotoesMenu:
+                    text: "Telefonema Misterioso"
+                    on_release: app.root.current = "content_screen_falhas_na_matrix"; app.root.get_screen('content_screen_falhas_na_matrix').load_content('https://icebergdemisterios.wordpress.com/telefonema-misterioso/')
+    
+                CustonBox:
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

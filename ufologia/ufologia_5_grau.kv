@@ -1,0 +1,43 @@
+<Ufologia_5_Grau>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/ce5.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Contatos Imediatos de 5°"
+
+                BotoesMenu:
+                    text: "Iniciativa CE-5 de Steven Greer"
+                    on_release: app.root.current = "content_screen_5_grau"; app.root.get_screen('content_screen_5_grau').load_content('https://icebergdemisterios.wordpress.com/iniciativa-ce-5-de-steven-greer/'); app.root.get_screen('content_screen_5_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Laurance Rockefeller e o Rancho Biedermann"
+                    on_release: app.root.current = "content_screen_5_grau"; app.root.get_screen('content_screen_5_grau').load_content('https://icebergdemisterios.wordpress.com/laurance-rockefeller-e-o-rancho-biedermann/'); app.root.get_screen('content_screen_5_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Marfa Lights (Texas)"
+                    on_release: app.root.current = "content_screen_5_grau"; app.root.get_screen('content_screen_5_grau').load_content('https://icebergdemisterios.wordpress.com/marfa-lights-texas/'); app.root.get_screen('content_screen_5_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                              
+                BotoesMenu:
+                    text: "Projeto SETI"
+                    on_release: app.root.current = "content_screen_5_grau"; app.root.get_screen('content_screen_5_grau').load_content('https://icebergdemisterios.wordpress.com/projeto-seti/'); app.root.get_screen('content_screen_5_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+               
+                BotoesVoltar:                    
+                    on_release: app.root.current = "ufologia"

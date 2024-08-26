@@ -1,0 +1,49 @@
+<Pessoas>:
+    # Cor de fundo e caixa de PESSOAS
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+
+        # Caixa da imagem e texto
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:
+                Image:
+                    source: "data/mysterious_people.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Pessoas\nRole para baixo para ver mais"
+                    
+# Caixa dos botões de de MENU                                                         
+
+                BotoesMenu:
+                    text: "Viagem no Tempo" 
+                    on_release: app.root.current = "viagem_no_tempo"                     
+
+                BotoesMenu:
+                    text: "Pessoas Misteriosas"   
+                    on_release: app.root.current = "pessoas_misteriosas" 
+
+                BotoesMenu:
+                    text: "Desaparecimentos" 
+                    on_release: app.root.current = "desaparecimentos"                  
+
+                BotoesMenu:
+                    text: "Viagens para outra dimensão"   
+                    on_release: app.root.current = "viagens_para_outra_dimensao" 
+
+                CustonBox:                       
+                    BotoesVoltar:                        
+                        on_release: app.root.current = "principal"

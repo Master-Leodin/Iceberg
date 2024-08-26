@@ -1,0 +1,48 @@
+<Artefatos_Misteriosos>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/mystery_artefact.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Artefatos misteriosos\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "Baterias de Bagdá"
+                    on_release: app.root.current = "content_screen_artefatos_misteriosos"; app.root.get_screen('content_screen_artefatos_misteriosos').load_content('https://icebergdemisterios.wordpress.com/baterias-de-bagda/')                                                                          
+                    
+                BotoesMenu:
+                    text: "Discos Dropa"
+                    on_release: app.root.current = "content_screen_artefatos_misteriosos"; app.root.get_screen('content_screen_artefatos_misteriosos').load_content('https://icebergdemisterios.wordpress.com/discos-dropa/')                                  
+                                                            
+                BotoesMenu:
+                    text: "Esferas de Klerksdorp"
+                    on_release: app.root.current = "content_screen_artefatos_misteriosos"; app.root.get_screen('content_screen_artefatos_misteriosos').load_content('https://icebergdemisterios.wordpress.com/esferas-de-klerksdorp/')                                  
+                                        
+                BotoesMenu:
+                    text: "Mecanismo de Anticítera"
+                    on_release: app.root.current = "content_screen_artefatos_misteriosos"; app.root.get_screen('content_screen_artefatos_misteriosos').load_content('https://icebergdemisterios.wordpress.com/mecanismo-de-anticitera/')                                  
+                                                            
+                BotoesMenu:
+                    text: "Pedra de Dighton"
+                    on_release: app.root.current = "content_screen_artefatos_misteriosos"; app.root.get_screen('content_screen_artefatos_misteriosos').load_content('https://icebergdemisterios.wordpress.com/pedra-de-dighton/')                                  
+                    
+                CustonBox:
+                    BotoesVoltar:                        
+                        on_release: app.root.current = "principal"

@@ -1,0 +1,49 @@
+<Reencarnacao>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/reencarnacao.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Reencarnação\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "Barbro Karlen (Suécia)"
+                    on_release: app.root.current = "content_screen_reencarnacao"; app.root.get_screen('content_screen_reencarnacao').load_content('https://icebergdemisterios.wordpress.com/barbro-karlen-suecia/')                                                                                               
+                                       
+                BotoesMenu:
+                    text: "Gêmeas Pollock (Reino Unido)"
+                    on_release: app.root.current = "content_screen_reencarnacao"; app.root.get_screen('content_screen_reencarnacao').load_content('https://icebergdemisterios.wordpress.com/gemeas-pollock-reino-unido/')                                                                                               
+                    
+                BotoesMenu:
+                    text: "James Leininger (EUA)"
+                    on_release: app.root.current = "content_screen_reencarnacao"; app.root.get_screen('content_screen_reencarnacao').load_content('https://icebergdemisterios.wordpress.com/james-leininger-eua/')                                                                                               
+                    
+                BotoesMenu:
+                    text: "Ryan Hammons (EUA)"
+                    on_release: app.root.current = "content_screen_reencarnacao"; app.root.get_screen('content_screen_reencarnacao').load_content('https://icebergdemisterios.wordpress.com/ryan-hammons-eua/')                                                                         
+                                         
+                BotoesMenu:
+                    text: "Shanti Devi (Índia)"
+                    on_release: app.root.current = "content_screen_reencarnacao"; app.root.get_screen('content_screen_reencarnacao').load_content('https://icebergdemisterios.wordpress.com/shanti-devi-india/')                                                                         
+                      
+                CustonBox:
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

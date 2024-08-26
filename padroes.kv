@@ -1,0 +1,186 @@
+<Padroes>
+<BotoesMenu@ButtonBehavior+Label>:
+    canvas.before:
+        Color:
+            rgba: (0.2, 0.2, 0.2, 1) if not self.state == 'down' else (0.5, 0.5, 0.5, 1)
+        RoundedRectangle:
+            pos: self.pos   
+            size: self.size
+            radius: [200]
+            source: "data/maos.png"
+    bold: True
+    opacity: 1
+    font_name: "fonts/almendra-regular.otf"
+    font_size: 35
+    height: 60
+    size_hint_y: None
+    on_release: app.root.transition.direction = "left"
+    padding: 20, 100
+
+<BotoesLivros@ButtonBehavior+Label>:
+    canvas.before:
+        Color:
+            rgba: (0.2, 0.2, 0.2, 1) if not self.state == 'down' else (0.5, 0.5, 0.5, 1)
+        RoundedRectangle:
+            pos: self.pos   
+            size: self.size
+            radius: [200]
+            source: "data/maos.png"
+    bold: True
+    opacity: 1
+    font_name: "fonts/almendra-regular.otf"
+    font_size: 35
+    height: 60
+    size_hint_y: None
+    on_release: app.root.transition.direction = "right"
+    padding: 20, 100
+
+<BotaoSobre@ButtonBehavior+Label>:
+    canvas.before:
+        Color:
+            rgba: self.color
+        RoundedRectangle:
+            pos: self.pos   
+            size: self.size
+            radius: [200]
+            source: "data/centipede.png"
+    bold: True
+    opacity: 1
+    font_name: "fonts/almendra-regular.otf"
+    font_size: 35
+    height: 60
+    size_hint_y: None
+    on_release: app.root.transition.direction = "up"
+    padding: 20, 100
+
+<BotoesPodcast@ButtonBehavior+Label>:
+    canvas.before:
+        Color:
+            rgba: (0.2, 0.2, 0.2, 1) if not self.state == 'down' else (0.5, 0.5, 0.5, 1)
+        RoundedRectangle:
+            pos: self.pos   
+            size: self.size
+            radius: [200]
+            source: "data/ufo_ouvir.png"
+    bold: True
+    opacity: 1
+    font_name: "fonts/almendra-regular.otf"
+    font_size: 30
+    height: 50
+    size_hint_y: None
+    padding: 2, 100
+
+<BotoesVoltar@ButtonBehavior+BoxLayout>:
+    orientation: 'horizontal'
+    size_hint: None, None
+    height: 80
+    width: self.minimum_width
+    on_release: app.root.transition.direction = "right"
+    canvas.before:
+        Color:
+            rgba: (1, 1, 1, 1) if not self.state == 'down' else (0.5, 0.5, 0.5, 1)
+        RoundedRectangle:
+            pos: self.pos   
+            size: self.size
+            radius: [200]
+            source: "data/eye.png"  # Coloca a imagem como fundo
+        
+    Label:
+        text: "Voltar"
+        bold: True
+        spacing: 5
+        opacity: 1
+        color: (1, 1, 1, 1)  # Cor branca para o texto
+        font_name: "fonts/gothic_ultra_ot.otf"
+        font_size: 40
+        size_hint_x: None
+        width: self.texture_size[0]
+        height: self.parent.height
+        pos_hint: {'center_y': 0.5}
+
+<BotoesVoltar2@ButtonBehavior+BoxLayout>:
+    orientation: 'horizontal'
+    size_hint: None, None
+    height: 80
+    width: self.minimum_width
+    on_release: app.root.transition.direction = "down"
+    canvas.before:
+        Color:
+            rgba: (1, 1, 1, 1) if not self.state == 'down' else (0.5, 0.5, 0.5, 1)
+        RoundedRectangle:
+            pos: self.pos   
+            size: self.size
+            radius: [200]
+            source: "data/eye.png"  # Coloca a imagem como fundo
+        
+    Label:
+        text: "Voltar"
+        bold: True
+        spacing: 5
+        opacity: 1
+        color: (1, 1, 1, 1)  # Cor branca para o texto
+        font_name: "fonts/gothic_ultra_ot.otf"
+        font_size: 40
+        size_hint_x: None
+        width: self.texture_size[0]
+        height: self.parent.height
+        pos_hint: {'center_y': 0.5}
+
+<BotoesVoltar3@ButtonBehavior+BoxLayout>:
+    orientation: 'horizontal'
+    size_hint: None, None
+    height: 80
+    width: self.minimum_width
+    on_release: app.root.transition.direction = "left"
+    canvas.before:
+        Color:
+            rgba: (1, 1, 1, 1) if not self.state == 'down' else (0.5, 0.5, 0.5, 1)
+        RoundedRectangle:
+            pos: self.pos   
+            size: self.size
+            radius: [200]
+            source: "data/eye.png"  # Coloca a imagem como fundo
+        
+    Label:
+        text: "Voltar"
+        bold: True
+        spacing: 5
+        opacity: 1
+        color: (1, 1, 1, 1)  # Cor branca para o texto
+        font_name: "fonts/gothic_ultra_ot.otf"
+        font_size: 40
+        size_hint_x: None
+        width: self.texture_size[0]
+        height: self.parent.height
+        pos_hint: {'center_y': 0.5}
+
+<CustomLabel@Label>:
+    padding: 20, 5
+    color: "red"
+    font_name: "fonts/almendra-regular.otf"
+    font_size: 38
+    bold: True
+    halign: 'center'
+    valign: 'middle'
+    text_size: self.width, None
+    size_hint_y: None
+    height: self.texture_size[1]
+
+<CustonBox@BoxLayout>:
+    padding: 50, 50
+    spacing: 20  
+    orientation: 'vertical'
+    size_hint_y: None
+    height: self.minimum_height
+
+<CustonBox2@BoxLayout>:
+    padding: 50, 0  
+    orientation: 'horizontal'
+    size_hint_y: None
+    height: self.minimum_height
+
+<CustonBoxLivros@BoxLayout>:
+    padding: 200, 0 
+    orientation: 'vertical'
+    size_hint_y: None
+    height: self.minimum_height

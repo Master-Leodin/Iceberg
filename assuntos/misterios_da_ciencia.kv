@@ -1,0 +1,37 @@
+<Misterios_Da_Ciencia>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/science_unsolved.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Mistérios da ciência\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "Matéria Escura"
+                    on_release: app.root.current = "content_screen_misterios_da_ciencia"; app.root.get_screen('content_screen_misterios_da_ciencia').load_content('https://icebergdemisterios.wordpress.com/materia-escura/')                                  
+                    
+                BotoesMenu:
+                    text: "Síndrome de Havana"
+                    on_release: app.root.current = "content_screen_misterios_da_ciencia"; app.root.get_screen('content_screen_misterios_da_ciencia').load_content('https://icebergdemisterios.wordpress.com/sindrome-de-havana/')                                  
+
+                CustonBox:
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

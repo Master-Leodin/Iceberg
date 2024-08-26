@@ -1,0 +1,85 @@
+<Criptozoologia>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/cryptozoology.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Selecione o criptídio"
+
+# Botões de Menu
+                
+                BotoesMenu:
+                    text: "Ahool (Indonésia)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/ahool-indonesia/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                                
+                BotoesMenu:
+                    text: "Beast of Gévaudan (França)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/beast-of-gevaudan-franca/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                                
+                BotoesMenu:
+                    text: "Bunyip (Austrália)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/bunyip-australia/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                                
+                BotoesMenu:
+                    text: "Chupacabra (América Latina)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/chupacabra-america-latina/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                                
+                BotoesMenu:
+                    text: "Jersey Devil (Estados Unidos)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/jersey-devil-estados-unidos/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Kraken (Mar Profundo)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/kraken-mar-profundo/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Mokele-mbembe (África Central)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/mokele-mbembe-africa-central/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Mongolian Death Worm (Mongólia)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/mongolian-death-worm-mongolia/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Monstro do Lago Ness (Escócia)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/monstro-do-lago-ness-escocia/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Mothman (Estados Unidos)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/mothman/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Ogopogo (Canadá)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/ogopogo-canada/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Pé Grande (América do Norte)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/pe-grande-america-do-norte/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Thunderbird (América do Norte)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/thunderbird-america-do-norte/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Yeti (Himalaia)"
+                    on_release: app.root.current = "content_screen_criptozoologia"; app.root.get_screen('content_screen_criptozoologia').load_content('https://icebergdemisterios.wordpress.com/yeti-himalaia/'); app.root.get_screen('content_screen_criptozoologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesVoltar:                    
+                    on_release: app.root.current = "animais"

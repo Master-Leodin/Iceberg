@@ -1,0 +1,69 @@
+<Ufologia>:
+    # Cor de fundo e caixa de UFOLOGIA
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+
+        # Caixa da imagem e texto
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:
+                Image:
+                    source: "data/ufology.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Ufologia\nSelecione um nível\nRole para baixo para ver mais"
+                    
+# Caixa dos botões de de MENU
+
+                BotoesMenu:
+                    text: "Tipos de CE"  
+                    on_release: app.root.current = "content_screen_ce"; app.root.get_screen('content_screen_ce').load_content('https://icebergdemisterios.wordpress.com/detalhes-de-todos-os-niveis-de-ce/')
+                                          
+                BotoesMenu:
+                    text: "Primeiro Grau"
+                    on_release: app.root.current = "ufologia_1_grau"                    
+
+                BotoesMenu:
+                    text: "Segundo Grau" 
+                    on_release: app.root.current = "ufologia_2_grau"                     
+
+                BotoesMenu:
+                    text: "Terceiro Grau"  
+                    on_release: app.root.current = "ufologia_3_grau"
+
+                BotoesMenu:
+                    text: "Quarto Grau"  
+                    on_release: app.root.current = "ufologia_4_grau"                    
+                
+                BotoesMenu:
+                    text: "Quinto Grau"  
+                    on_release: app.root.current = "ufologia_5_grau"                    
+
+                BotoesMenu:
+                    text: "Sexto Grau"  
+                    on_release: app.root.current = "ufologia_6_grau"                    
+                
+                BotoesMenu:
+                    text: "Sétino Grau"  
+                    on_release: app.root.current = "ufologia_7_grau"                    
+
+# Caixa dos botões de VOLTAR
+
+                CustonBox:
+                        
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

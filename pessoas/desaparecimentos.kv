@@ -1,0 +1,51 @@
+<Desaparecimentos>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/desaparecimentos.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Selecione o caso de desaparecimento"
+                    
+                BotoesMenu:
+                    text: "Amelia Earhart (1937)"
+                    on_release: app.root.current = "content_screen_desaparecimentos"; app.root.get_screen('content_screen_desaparecimentos').load_content('https://icebergdemisterios.wordpress.com/amelia-earhart-1937/')
+                                                            
+                BotoesMenu:
+                    text: "Elisa Lam (2013)"
+                    on_release: app.root.current = "content_screen_desaparecimentos"; app.root.get_screen('content_screen_desaparecimentos').load_content('https://icebergdemisterios.wordpress.com/elisa-lam-2013/')
+                                        
+                BotoesMenu:
+                    text: "Família Sodder (1945)"
+                    on_release: app.root.current = "content_screen_desaparecimentos"; app.root.get_screen('content_screen_desaparecimentos').load_content('https://icebergdemisterios.wordpress.com/familia-sodder-1945/')
+                                                           
+                BotoesMenu:
+                    text: "Irmãos Beaumont (1966)"
+                    on_release: app.root.current = "content_screen_desaparecimentos"; app.root.get_screen('content_screen_desaparecimentos').load_content('https://icebergdemisterios.wordpress.com/irmaos-beaumont-1966/')
+                    
+                BotoesMenu:
+                    text: "Madeleine McCann (2007)"
+                    on_release: app.root.current = "content_screen_desaparecimentos"; app.root.get_screen('content_screen_desaparecimentos').load_content('https://icebergdemisterios.wordpress.com/madeleine-mccann-2007/')
+                    
+                BotoesMenu:
+                    text: "Voo MH370 da Malaysia Airlines (2014)"
+                    on_release: app.root.current = "content_screen_desaparecimentos"; app.root.get_screen('content_screen_desaparecimentos').load_content('https://icebergdemisterios.wordpress.com/voo-mh370-da-malaysia-airlines-2014/')
+
+                BotoesVoltar:                    
+                    on_release: app.root.current = "pessoas"

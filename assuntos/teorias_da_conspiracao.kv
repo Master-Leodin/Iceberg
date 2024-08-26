@@ -1,0 +1,52 @@
+<Teorias_Da_Conspiracao>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/conspiracoes.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Teorias da conspiração\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "9/11 e o Ataque de Falsa Bandeira"
+                    on_release: app.root.current = "content_screen_teorias_da_conspiracao"; app.root.get_screen('content_screen_teorias_da_conspiracao').load_content('https://icebergdemisterios.wordpress.com/9-11-e-o-ataque-de-falsa-bandeira/')                                      
+                    
+                BotoesMenu:
+                    text: "Área 51 e Extraterrestres"
+                    on_release: app.root.current = "content_screen_teorias_da_conspiracao"; app.root.get_screen('content_screen_teorias_da_conspiracao').load_content('https://icebergdemisterios.wordpress.com/area-51-e-extraterrestres/')                   
+                    
+                BotoesMenu:
+                    text: "Chemtrails"
+                    on_release: app.root.current = "content_screen_teorias_da_conspiracao"; app.root.get_screen('content_screen_teorias_da_conspiracao').load_content('https://icebergdemisterios.wordpress.com/chemtrails/')                   
+                    
+                BotoesMenu:
+                    text: "Nova Ordem Mundial (NWO)"
+                    on_release: app.root.current = "content_screen_teorias_da_conspiracao"; app.root.get_screen('content_screen_teorias_da_conspiracao').load_content('https://icebergdemisterios.wordpress.com/nova-ordem-mundial-nwo/')
+                    
+                BotoesMenu:
+                    text: "Projeto MK-Ultra"
+                    on_release: app.root.current = "content_screen_teorias_da_conspiracao"; app.root.get_screen('content_screen_teorias_da_conspiracao').load_content('https://icebergdemisterios.wordpress.com/projeto-mk-ultra/')
+                    
+                BotoesMenu:
+                    text: "QAnon"
+                    on_release: app.root.current = "content_screen_teorias_da_conspiracao"; app.root.get_screen('content_screen_teorias_da_conspiracao').load_content('https://icebergdemisterios.wordpress.com/qanon/')
+
+                CustonBox:
+                    BotoesVoltar:                        
+                        on_release: app.root.current = "principal"

@@ -1,0 +1,41 @@
+<Casos_Nao_Resolvidos>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/casos_n_res.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Casos não resolvidos\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "D.B. Cooper (1971)"
+                    on_release: app.root.current = "content_screen_casos_nao_resolvidos"; app.root.get_screen('content_screen_casos_nao_resolvidos').load_content('https://icebergdemisterios.wordpress.com/d-b-cooper-1971/')
+              
+                BotoesMenu:
+                    text: "Jack, o Estripador (1888)"
+                    on_release: app.root.current = "content_screen_casos_nao_resolvidos"; app.root.get_screen('content_screen_casos_nao_resolvidos').load_content('https://icebergdemisterios.wordpress.com/jack-o-estripador-1888/')
+                           
+                BotoesMenu:
+                    text: "Tupac Shakur (1996)"
+                    on_release: app.root.current = "content_screen_casos_nao_resolvidos"; app.root.get_screen('content_screen_casos_nao_resolvidos').load_content('https://icebergdemisterios.wordpress.com/tupac-shakur-1996/')
+      
+                CustonBox:
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

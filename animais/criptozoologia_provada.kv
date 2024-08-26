@@ -1,0 +1,100 @@
+<Criptozoologia_Provada>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/cryptozoology_proved.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Selecione o ex-criptídio"
+
+                BotoesMenu:
+                    text: "Bondegezou"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/bondegezou/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Canguru"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/canguru/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Celacanto"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/celacanto/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Dragão de Komodo"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/dragao-de-komodo/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Duiker-de-Jentink"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/duiker-de-jentink/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Gorila"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/gorila/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Lula Colossal"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/lula-colossal/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Lula Gigante"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/lula-gigante/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')               
+                                
+                BotoesMenu:
+                    text: "Megaloceros"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/megaloceros/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                                               
+                                
+                BotoesMenu:
+                    text: "Narval"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/narval/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                   
+                                
+                BotoesMenu:
+                    text: "Okapi "
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/okapi/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Orangotango"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/orangotango/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                                
+                BotoesMenu:
+                    text: "Ornitorrinco"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/ornitorrinco-2'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Oryx árabe"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/oryx-arabe/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Panda Gigante"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/panda-gigante/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                
+                BotoesMenu:
+                    text: "Saola"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/saola/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                                                            
+                BotoesMenu:
+                    text: "Tartaruga de Galápagos"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/tartaruga-de-galapagos/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                                            
+                BotoesMenu:
+                    text: "Tigre-da-Tasmânia"
+                    on_release: app.root.current = "content_screen_criptozoologia_provada"; app.root.get_screen('content_screen_criptozoologia_provada').load_content('https://icebergdemisterios.wordpress.com/tigre-da-tasmania/'); app.root.get_screen('content_screen_criptozoologia_provada').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                                            
+                BotoesVoltar:                    
+                    on_release: app.root.current = "animais"

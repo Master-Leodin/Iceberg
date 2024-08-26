@@ -1,0 +1,33 @@
+<Livros>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/knolege_books.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Livros\nSelecione o livro\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "Livros"
+                    on_release: app.root.current = "livros"
+
+                CustonBox:
+                    BotoesVoltar3:
+                        
+                        on_release: app.root.current = "principal"

@@ -1,0 +1,40 @@
+<Animais>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 5
+        spacing: 5
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/animais.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Animais\nSelecione um assunto\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "Criptozoologia"
+                    on_release: app.root.current = "criptozoologia"
+
+                BotoesMenu:
+                    text: "Criptozoologia provada"
+                    on_release: app.root.current = "criptozoologia_provada"
+                    
+                BotoesMenu:
+                    text: "Mitológicos"
+                    on_release: app.root.current = "mitologia"
+
+                CustonBox:   
+                    BotoesVoltar:                       
+                        on_release: app.root.current = "principal"

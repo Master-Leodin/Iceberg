@@ -1,0 +1,41 @@
+<Mensagens_Criptografadas>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/criptografias.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Mensagens criptografadas\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "Código Beale"
+                    on_release: app.root.current = "content_screen_mensagens_criptografadas"; app.root.get_screen('content_screen_mensagens_criptografadas').load_content('https://icebergdemisterios.wordpress.com/codigo-beale/')             
+                                         
+                BotoesMenu:
+                    text: "Kryptos"
+                    on_release: app.root.current = "content_screen_mensagens_criptografadas"; app.root.get_screen('content_screen_mensagens_criptografadas').load_content('https://icebergdemisterios.wordpress.com/kryptos/')             
+                                                             
+                BotoesMenu:
+                    text: "Mensagem de D'Agapeyeff"
+                    on_release: app.root.current = "content_screen_mensagens_criptografadas"; app.root.get_screen('content_screen_mensagens_criptografadas').load_content('https://icebergdemisterios.wordpress.com/mensagem-de-dagapeyeff/')             
+                     
+                CustonBox:
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

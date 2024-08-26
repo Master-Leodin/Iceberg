@@ -1,0 +1,49 @@
+<Livros_Misteriosos>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/mystery_books.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Livros misteriosos\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "Codex Gigas (Bíblia do Diabo)"
+                    on_release: app.root.current = "content_screen_livros_misteriosos"; app.root.get_screen('content_screen_livros_misteriosos').load_content('https://icebergdemisterios.wordpress.com/codex-gigas-biblia-do-diabo/')             
+                                                                              
+                BotoesMenu:
+                    text: "Grande Grimório"
+                    on_release: app.root.current = "content_screen_livros_misteriosos"; app.root.get_screen('content_screen_livros_misteriosos').load_content('https://icebergdemisterios.wordpress.com/grande-grimorio/')             
+                                                          
+                BotoesMenu:
+                    text: "Livro de Thoth"
+                    on_release: app.root.current = "content_screen_livros_misteriosos"; app.root.get_screen('content_screen_livros_misteriosos').load_content('https://icebergdemisterios.wordpress.com/livro-de-thoth/')             
+                                       
+                BotoesMenu:
+                    text: "Manuscrito Voynich"
+                    on_release: app.root.current = "content_screen_livros_misteriosos"; app.root.get_screen('content_screen_livros_misteriosos').load_content('https://icebergdemisterios.wordpress.com/manuscrito-voynich/')             
+                                                          
+                BotoesMenu:
+                    text: "The Nine Unknown Men (Os Nove Desconhecidos)"
+                    on_release: app.root.current = "content_screen_livros_misteriosos"; app.root.get_screen('content_screen_livros_misteriosos').load_content('https://icebergdemisterios.wordpress.com/the-nine-unknown-men-os-nove-desconhecidos/')             
+                    
+                CustonBox:
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

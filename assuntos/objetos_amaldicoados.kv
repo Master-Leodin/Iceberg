@@ -1,0 +1,49 @@
+<Objetos_Amaldicoados>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/cursed_objects.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Objetos amaldiçoados\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "Annabelle, a Boneca"
+                    on_release: app.root.current = "content_screen_objetos_amaldicoados"; app.root.get_screen('content_screen_objetos_amaldicoados').load_content('https://icebergdemisterios.wordpress.com/annabelle-a-boneca/')                                                                         
+                                        
+                BotoesMenu:
+                    text: "Caixa Dybbuk"
+                    on_release: app.root.current = "content_screen_objetos_amaldicoados"; app.root.get_screen('content_screen_objetos_amaldicoados').load_content('https://icebergdemisterios.wordpress.com/caixa-dybbuk/')                                                                         
+                    
+                BotoesMenu:
+                    text: "Diamante Hope"
+                    on_release: app.root.current = "content_screen_objetos_amaldicoados"; app.root.get_screen('content_screen_objetos_amaldicoados').load_content('https://icebergdemisterios.wordpress.com/diamante-hope/')                                  
+                                       
+                BotoesMenu:
+                    text: "Mão da Glória"
+                    on_release: app.root.current = "content_screen_objetos_amaldicoados"; app.root.get_screen('content_screen_objetos_amaldicoados').load_content('https://icebergdemisterios.wordpress.com/mao-da-gloria/')                                  
+                                                           
+                BotoesMenu:
+                    text: 'Pintura "The Anguished Man"'
+                    on_release: app.root.current = "content_screen_objetos_amaldicoados"; app.root.get_screen('content_screen_objetos_amaldicoados').load_content('https://icebergdemisterios.wordpress.com/pintura-the-anguished-man/')                                  
+                    
+                CustonBox:
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

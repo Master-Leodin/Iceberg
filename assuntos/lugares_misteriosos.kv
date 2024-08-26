@@ -1,0 +1,39 @@
+<Lugares_Misteriosos>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/mystery_places.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Selecione o Lugar\nRole para baixo para ver mais"
+                     
+                BotoesMenu:
+                    text: "Amityville (1974)"
+                    on_release: app.root.current = "content_screen_lugares_misteriosos"; app.root.get_screen('content_screen_lugares_misteriosos').load_content('https://icebergdemisterios.wordpress.com/amityville-1974/')             
+                     
+                BotoesMenu:
+                    text: "Hotel Stanley"
+                    on_release: app.root.current = "content_screen_lugares_misteriosos"; app.root.get_screen('content_screen_lugares_misteriosos').load_content('https://icebergdemisterios.wordpress.com/hotel-stanley/')             
+                     
+                BotoesMenu:
+                    text: "Mansão Winchester"
+                    on_release: app.root.current = "content_screen_lugares_misteriosos"; app.root.get_screen('content_screen_lugares_misteriosos').load_content('https://icebergdemisterios.wordpress.com/mansao-winchester/')             
+
+                BotoesVoltar:                    
+                    on_release: app.root.current = "principal"

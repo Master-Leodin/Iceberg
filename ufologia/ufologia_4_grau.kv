@@ -1,0 +1,47 @@
+<Ufologia_4_Grau>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/ce4.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Contatos Imediatos de 4°"
+
+                BotoesMenu:
+                    text: "Allagash (1976)"
+                    on_release: app.root.current = "content_screen_4_grau"; app.root.get_screen('content_screen_4_grau').load_content('https://icebergdemisterios.wordpress.com/allagash-1976/'); app.root.get_screen('content_screen_4_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Antônio Villas Boas (1957)"
+                    on_release: app.root.current = "content_screen_4_grau"; app.root.get_screen('content_screen_4_grau').load_content('https://icebergdemisterios.wordpress.com/antonio-villas-boas-1957/'); app.root.get_screen('content_screen_4_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Betty e Barney Hill (1961)"
+                    on_release: app.root.current = "content_screen_4_grau"; app.root.get_screen('content_screen_4_grau').load_content('https://icebergdemisterios.wordpress.com/betty-e-barney-hill-1961/'); app.root.get_screen('content_screen_4_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Linda Cortile (1991)"
+                    on_release: app.root.current = "content_screen_4_grau"; app.root.get_screen('content_screen_4_grau').load_content('https://icebergdemisterios.wordpress.com/linda-cortile-1991/'); app.root.get_screen('content_screen_4_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Travis Walton (1975)"
+                    on_release: app.root.current = "content_screen_4_grau"; app.root.get_screen('content_screen_4_grau').load_content('https://icebergdemisterios.wordpress.com/travis-walton-1975/'); app.root.get_screen('content_screen_4_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesVoltar:                    
+                    on_release: app.root.current = "ufologia"

@@ -1,0 +1,43 @@
+<Ufologia_7_Grau>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/ce7.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Contatos Imediatos de 7°"
+
+                BotoesMenu:
+                    text: "David Huggins (1960)"
+                    on_release: app.root.current = "content_screen_7_grau"; app.root.get_screen('content_screen_7_grau').load_content('https://icebergdemisterios.wordpress.com/david-huggins-1960/'); app.root.get_screen('content_screen_7_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+               
+                BotoesMenu:
+                    text: "Peter Khoury (1988)"
+                    on_release: app.root.current = "content_screen_7_grau"; app.root.get_screen('content_screen_7_grau').load_content('https://icebergdemisterios.wordpress.com/peter-khoury-1988/'); app.root.get_screen('content_screen_7_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+                             
+                BotoesMenu:
+                    text: "Sharon Gilbert (1970)"
+                    on_release: app.root.current = "content_screen_7_grau"; app.root.get_screen('content_screen_7_grau').load_content('https://icebergdemisterios.wordpress.com/sharon-gilbert-1970/'); app.root.get_screen('content_screen_7_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+               
+                BotoesMenu:
+                    text: "The Hybrid Children Community (2000+)"
+                    on_release: app.root.current = "content_screen_7_grau"; app.root.get_screen('content_screen_7_grau').load_content('https://icebergdemisterios.wordpress.com/the-hybrid-children-community-2000/'); app.root.get_screen('content_screen_7_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+               
+                BotoesVoltar:                    
+                    on_release: app.root.current = "ufologia"

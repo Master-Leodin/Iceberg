@@ -1,0 +1,47 @@
+<Viagens_Para_Outra_Dimensao>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/dimencoes.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Selecione o caso de viagem\npara outra dimensão"
+                    
+                BotoesMenu:
+                    text: "Experimento de Filadélfia (1943)"
+                    on_release: app.root.current = "content_screen_viagens_para_outra_dimensao"; app.root.get_screen('content_screen_viagens_para_outra_dimensao').load_content('https://icebergdemisterios.wordpress.com/experimento-de-filadelfia-1943/')
+                                                           
+                BotoesMenu:
+                    text: "Homem de Taured (1954)"
+                    on_release: app.root.current = "content_screen_viagens_para_outra_dimensao"; app.root.get_screen('content_screen_viagens_para_outra_dimensao').load_content('https://icebergdemisterios.wordpress.com/homem-de-taured-1954/')
+                                       
+                BotoesMenu:
+                    text: "Hotel de Moberly-Jourdain (1901)"
+                    on_release: app.root.current = "content_screen_viagens_para_outra_dimensao"; app.root.get_screen('content_screen_viagens_para_outra_dimensao').load_content('https://icebergdemisterios.wordpress.com/hotel-de-moberly-jourdain-1901/')
+                    
+                BotoesMenu:
+                    text: "Lerina García (2008)"
+                    on_release: app.root.current = "content_screen_viagens_para_outra_dimensao"; app.root.get_screen('content_screen_viagens_para_outra_dimensao').load_content('https://icebergdemisterios.wordpress.com/lerina-garcia-2008/')
+                    
+                BotoesMenu:
+                    text: "Ong's Hat"
+                    on_release: app.root.current = "content_screen_viagens_para_outra_dimensao"; app.root.get_screen('content_screen_viagens_para_outra_dimensao').load_content('https://icebergdemisterios.wordpress.com/ongs-hat/')
+
+                BotoesVoltar:                    
+                    on_release: app.root.current = "pessoas"

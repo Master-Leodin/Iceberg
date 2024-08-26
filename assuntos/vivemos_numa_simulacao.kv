@@ -1,0 +1,57 @@
+<Vivemos_Numa_Simulacao>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/simulation.png"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Vivemos numa simulação?\nRole para baixo para ver mais"
+
+                BotoesMenu:
+                    text: "Argumento da Simulação de Nick Bostrom (2003)"
+                    on_release: app.root.current = "content_screen_vivemos_numa_simulacao"; app.root.get_screen('content_screen_vivemos_numa_simulacao').load_content('https://icebergdemisterios.wordpress.com/argumento-da-simulacao-de-nick-bostrom-2003/')
+
+                BotoesMenu:
+                    text: "Deja Vu e Glitches na Realidade"
+                    on_release: app.root.current = "content_screen_vivemos_numa_simulacao"; app.root.get_screen('content_screen_vivemos_numa_simulacao').load_content('https://icebergdemisterios.wordpress.com/deja-vu-e-glitches-na-realidade/')
+
+                BotoesMenu:
+                    text: "Elon Musk"
+                    on_release: app.root.current = "content_screen_vivemos_numa_simulacao"; app.root.get_screen('content_screen_vivemos_numa_simulacao').load_content('https://icebergdemisterios.wordpress.com/elon-musk/')
+
+                BotoesMenu:
+                    text: "Enigma de Roko"
+                    on_release: app.root.current = "content_screen_vivemos_numa_simulacao"; app.root.get_screen('content_screen_vivemos_numa_simulacao').load_content('https://icebergdemisterios.wordpress.com/enigma-de-roko/')
+
+                BotoesMenu:
+                    text: "Experimentos Mentais e Provas Filosóficas"
+                    on_release: app.root.current = "content_screen_vivemos_numa_simulacao"; app.root.get_screen('content_screen_vivemos_numa_simulacao').load_content('https://icebergdemisterios.wordpress.com/experimentos-mentais-e-provas-filosoficas/')
+
+                BotoesMenu:
+                    text: 'Filme "The Matrix" (1999)'
+                    on_release: app.root.current = "content_screen_vivemos_numa_simulacao"; app.root.get_screen('content_screen_vivemos_numa_simulacao').load_content('https://icebergdemisterios.wordpress.com/filme-the-matrix-1999/')
+
+                BotoesMenu:
+                    text: "Pesquisas Científicas sobre Simulações"
+                    on_release: app.root.current = "content_screen_vivemos_numa_simulacao"; app.root.get_screen('content_screen_vivemos_numa_simulacao').load_content('https://icebergdemisterios.wordpress.com/pesquisas-cientificas-sobre-simulacoes/')
+
+                CustonBox:
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

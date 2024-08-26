@@ -1,0 +1,47 @@
+<ContentScreen_Civilizacoes_Perdidas>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+
+        Label:
+            text: root.title
+            font_size: 24
+            bold: True
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:
+                AsyncImage:
+                    source: root.image_source
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+
+                BotoesPodcast:
+                    text: "Ouvir no Fountain.fm"
+                    on_release: root.open_podcast_fountain()
+
+                Label:
+                    text: root.content
+                    padding: 5, 10
+                    font_size: 35
+                    text_size: self.width, None
+                    size_hint_y: None
+                    halign: 'center'
+                    valign: 'middle'                      
+                    height: self.texture_size[1]
+                
+                BotoesVoltar:                    
+                    on_release: app.root.current = "civilizacoes_perdidas"

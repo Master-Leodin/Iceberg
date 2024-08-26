@@ -1,0 +1,53 @@
+<Civilizacoes_Perdidas>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/lost_civ.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Civilizações perdidas\nRole para baixo para ver mais"
+                    
+                BotoesMenu:
+                    text: "Atlântida"
+                    on_release: app.root.current = "content_screen_civilizacoes_perdidas"; app.root.get_screen('content_screen_civilizacoes_perdidas').load_content('https://icebergdemisterios.wordpress.com/atlantida/')             
+                                       
+                BotoesMenu:
+                    text: "Cultura Clovis"
+                    on_release: app.root.current = "content_screen_civilizacoes_perdidas"; app.root.get_screen('content_screen_civilizacoes_perdidas').load_content('https://icebergdemisterios.wordpress.com/cultura-clovis/')             
+                                                           
+                BotoesMenu:
+                    text: "Gobekli Tepe"
+                    on_release: app.root.current = "content_screen_civilizacoes_perdidas"; app.root.get_screen('content_screen_civilizacoes_perdidas').load_content('https://icebergdemisterios.wordpress.com/gobekli-tepe/')             
+                    
+                BotoesMenu:
+                    text: "Lemúria"
+                    on_release: app.root.current = "content_screen_civilizacoes_perdidas"; app.root.get_screen('content_screen_civilizacoes_perdidas').load_content('https://icebergdemisterios.wordpress.com/lemuria/')             
+                    
+                BotoesMenu:
+                    text: "Mu"
+                    on_release: app.root.current = "content_screen_civilizacoes_perdidas"; app.root.get_screen('content_screen_civilizacoes_perdidas').load_content('https://icebergdemisterios.wordpress.com/mu/')             
+                    
+                BotoesMenu:
+                    text: "Paititi"
+                    on_release: app.root.current = "content_screen_civilizacoes_perdidas"; app.root.get_screen('content_screen_civilizacoes_perdidas').load_content('https://icebergdemisterios.wordpress.com/paititi/')             
+
+                CustonBox:
+                    BotoesVoltar:
+                        
+                        on_release: app.root.current = "principal"

@@ -1,0 +1,51 @@
+<Viagem_No_Tempo>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/time_travel.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Selecione o caso"
+                    
+                BotoesMenu:
+                    text: "Celular no filme do Chaplin (1928)"
+                    on_release: app.root.current = "content_screen_viagem_no_tempo"; app.root.get_screen('content_screen_viagem_no_tempo').load_content('https://icebergdemisterios.wordpress.com/chaplin-1928/')
+                                                           
+                BotoesMenu:
+                    text: "Hipster Viajante do Tempo (1941)"
+                    on_release: app.root.current = "content_screen_viagem_no_tempo"; app.root.get_screen('content_screen_viagem_no_tempo').load_content('https://icebergdemisterios.wordpress.com/hipster-viajante-do-tempo-1941/')
+                                       
+                BotoesMenu:
+                    text: "John Titor (2000-2001)"
+                    on_release: app.root.current = "content_screen_viagem_no_tempo"; app.root.get_screen('content_screen_viagem_no_tempo').load_content('https://icebergdemisterios.wordpress.com/john-titor-2000-2001/')
+                    
+                BotoesMenu:
+                    text: "Luta de Mike Tyson (1995)"
+                    on_release: app.root.current = "content_screen_viagem_no_tempo"; app.root.get_screen('content_screen_viagem_no_tempo').load_content('https://icebergdemisterios.wordpress.com/luta-de-mike-tyson-1995/')
+                    
+                BotoesMenu:
+                    text: "Manuscrito de 'Moberly-Jourdain' (1901)"
+                    on_release: app.root.current = "content_screen_viagem_no_tempo"; app.root.get_screen('content_screen_viagem_no_tempo').load_content('https://icebergdemisterios.wordpress.com/manuscrito-de-moberly-jourdain-1901/')
+
+                BotoesMenu:
+                    text: "Mulher Falando num celular (1938)"
+                    on_release: app.root.current = "content_screen_viagem_no_tempo"; app.root.get_screen('content_screen_viagem_no_tempo').load_content('https://icebergdemisterios.wordpress.com/mulher-falando-num-celular-1938/')
+
+                BotoesVoltar:                    
+                    on_release: app.root.current = "pessoas"

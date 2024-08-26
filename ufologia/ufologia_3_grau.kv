@@ -1,0 +1,47 @@
+<Ufologia_3_Grau>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/ce3.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Contatos Imediatos de 3°"
+                    
+                BotoesMenu:
+                    text: "Kelly-Hopkinsville (1955)"
+                    on_release: app.root.current = "content_screen_3_grau"; app.root.get_screen('content_screen_3_grau').load_content('https://icebergdemisterios.wordpress.com/kelly-hopkinsville-1955/'); app.root.get_screen('content_screen_3_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Valensole (1965)"
+                    on_release: app.root.current = "content_screen_3_grau"; app.root.get_screen('content_screen_3_grau').load_content('https://icebergdemisterios.wordpress.com/valensole-1965/'); app.root.get_screen('content_screen_3_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Falcon Lake (1967)"
+                    on_release: app.root.current = "content_screen_3_grau"; app.root.get_screen('content_screen_3_grau').load_content('https://icebergdemisterios.wordpress.com/falcon-lake-1967/'); app.root.get_screen('content_screen_3_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Pascagoula (1973)"
+                    on_release: app.root.current = "content_screen_3_grau"; app.root.get_screen('content_screen_3_grau').load_content('https://icebergdemisterios.wordpress.com/pascagoula-1973/'); app.root.get_screen('content_screen_3_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesMenu:
+                    text: "Voronezh (1989)"
+                    on_release: app.root.current = "content_screen_3_grau"; app.root.get_screen('content_screen_3_grau').load_content('https://icebergdemisterios.wordpress.com/voronezh-1989/'); app.root.get_screen('content_screen_3_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesVoltar:                    
+                    on_release: app.root.current = "ufologia"

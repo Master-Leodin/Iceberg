@@ -1,0 +1,59 @@
+<Pessoas_Misteriosas>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/mysterious_people_2.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Selecione a pessoa misteriosa"
+                    
+                BotoesMenu:
+                    text: "Benjaman Kyle"
+                    on_release: app.root.current = "content_screen_pessoas_misteriosas"; app.root.get_screen('content_screen_pessoas_misteriosas').load_content('https://icebergdemisterios.wordpress.com/benjaman-kyle/')
+                                       
+                BotoesMenu:
+                    text: "Charles Jamison"
+                    on_release: app.root.current = "content_screen_pessoas_misteriosas"; app.root.get_screen('content_screen_pessoas_misteriosas').load_content('https://icebergdemisterios.wordpress.com/charles-jamison/')
+                    
+                BotoesMenu:
+                    text: "Homem de Somerton (Caso Tamam Shud)"
+                    on_release: app.root.current = "content_screen_pessoas_misteriosas"; app.root.get_screen('content_screen_pessoas_misteriosas').load_content('https://icebergdemisterios.wordpress.com/homem-de-somerton-caso-tamam-shud/')
+                                                  
+                BotoesMenu:
+                    text: "Lori Erica Ruff"
+                    on_release: app.root.current = "content_screen_pessoas_misteriosas"; app.root.get_screen('content_screen_pessoas_misteriosas').load_content('https://icebergdemisterios.wordpress.com/lori-erica-ruff/')
+                                        
+                BotoesMenu:
+                    text: "Lyle Stevik"
+                    on_release: app.root.current = "content_screen_pessoas_misteriosas"; app.root.get_screen('content_screen_pessoas_misteriosas').load_content('https://icebergdemisterios.wordpress.com/lyle-stevik/')
+                    
+                BotoesMenu:
+                    text: "Mulher de Isdal"
+                    on_release: app.root.current = "content_screen_pessoas_misteriosas"; app.root.get_screen('content_screen_pessoas_misteriosas').load_content('https://icebergdemisterios.wordpress.com/mulher-de-isdal/')
+                                        
+                BotoesMenu:
+                    text: "Mulher da Freeway"
+                    on_release: app.root.current = "content_screen_pessoas_misteriosas"; app.root.get_screen('content_screen_pessoas_misteriosas').load_content('https://icebergdemisterios.wordpress.com/mulher-da-freeway/')
+                    
+                BotoesMenu:
+                    text: "Mulher de Oslo Plaza"
+                    on_release: app.root.current = "content_screen_pessoas_misteriosas"; app.root.get_screen('content_screen_pessoas_misteriosas').load_content('https://icebergdemisterios.wordpress.com/mulher-de-oslo-plaza/')
+
+                BotoesVoltar:                    
+                    on_release: app.root.current = "pessoas"

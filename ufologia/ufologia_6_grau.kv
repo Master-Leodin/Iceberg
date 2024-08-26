@@ -1,0 +1,39 @@
+<Ufologia_6_Grau>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/ce6.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Contatos Imediatos de 6°"
+
+                BotoesMenu:
+                    text: "Dyatlov Pass (1959)"
+                    on_release: app.root.current = "content_screen_6_grau"; app.root.get_screen('content_screen_6_grau').load_content('https://icebergdemisterios.wordpress.com/dyatlov-pass-1959/'); app.root.get_screen('content_screen_6_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+               
+                BotoesMenu:
+                    text: "Laredo (1974)"
+                    on_release: app.root.current = "content_screen_6_grau"; app.root.get_screen('content_screen_6_grau').load_content('https://icebergdemisterios.wordpress.com/laredo-1974/'); app.root.get_screen('content_screen_6_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+               
+                BotoesMenu:
+                    text: "Morro de Varginha (1986)"
+                    on_release: app.root.current = "content_screen_6_grau"; app.root.get_screen('content_screen_6_grau').load_content('https://icebergdemisterios.wordpress.com/morro-de-varginha-1986/'); app.root.get_screen('content_screen_6_grau').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+               
+                BotoesVoltar:                    
+                    on_release: app.root.current = "ufologia"

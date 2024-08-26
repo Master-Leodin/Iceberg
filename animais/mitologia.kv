@@ -1,0 +1,67 @@
+<Mitologia>:
+    canvas.before:
+        Rectangle:
+            source: "data/sky.png"
+            size: self.size
+            pos: self.pos
+
+    # Layout principal que inclui a área rolável
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 0
+        spacing: 0
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            CustonBox:                
+                Image:
+                    source: "data/mythology.jpg"
+                    size_hint_y: None
+                    height: dp(200)
+                    fit_mode: "contain"
+                CustomLabel:
+                    text: f"Selecione o animal mitológico"
+                    
+                BotoesMenu:
+                    text: "Boitatá"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/boitata/'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                   
+                                                   
+                BotoesMenu:
+                    text: "Boto Cor-de-Rosa"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/boto-cor-de-rosa/'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                   
+                                                                                                                                     
+                BotoesMenu:
+                    text: "Caboclo D'Água"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/caboclo-dagua/'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                   
+                                                                                                                                                                                                                      
+                BotoesMenu:
+                    text: "Caipora"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/caipora/'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                   
+                                                                                  
+                BotoesMenu:
+                    text: "Cuca"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/cuca/'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                   
+                               
+                BotoesMenu:
+                    text: "Curupira"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/curupira/'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                   
+                                          
+                BotoesMenu:
+                    text: "Iara"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/iara/'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                              
+                                          
+                BotoesMenu:
+                    text: "Lobisomem"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/lobisomem/'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')                   
+            
+                BotoesMenu:
+                    text: "Mula sem cabeça"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/mula-sem-cabeca'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+            
+                BotoesMenu:
+                    text: "Saci-Pererê"
+                    on_release: app.root.current = "content_screen_mitologia"; app.root.get_screen('content_screen_mitologia').load_content('https://icebergdemisterios.wordpress.com/saci-perere/'); app.root.get_screen('content_screen_mitologia').set_podcast_url('https://www.fountain.fm/episode/ZWWWuS19roB0ILvvZipt')
+
+                BotoesVoltar:                    
+                    on_release: app.root.current = "animais"
