@@ -5,3 +5,6 @@ Podemos trabalhar juntos.
 
 Objetivo do programa:
 Para vender, fazer parcerias ou usar de portfólio.
+
+Poderá ver detalhes dele aqui:
+https://icebergdemisterios.wordpress.com/detalhes-do-projeto/
